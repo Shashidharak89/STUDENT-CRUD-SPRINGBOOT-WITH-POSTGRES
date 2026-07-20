@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class StudentController {
     private StudentService service;
@@ -21,5 +23,8 @@ public class StudentController {
         return service.addStudent(s);
     }
 
-
+    @GetMapping("/student")
+    public List<Student> getAll(){
+        return service.getAllStudents();
+    }
 }
