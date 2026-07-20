@@ -48,6 +48,9 @@ public class StudentService {
         return "Deleted";
     }
 
+    public long recordsCount(){
+       return repo.count();
+    }
 
 }
 

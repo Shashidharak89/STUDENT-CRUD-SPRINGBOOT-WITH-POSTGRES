@@ -28,7 +28,12 @@ public class StudentController {
     public List<Student> getAll(){
         return service.getAllStudents();
     }
-    
+
+    @GetMapping("/student/count")
+    public long count(){
+        return service.recordsCount();
+    }
+
     @GetMapping("/student/{usn}")
     public Student getStudentByUSN(@PathVariable String usn){
         return service.getStudentByUSN(usn);
