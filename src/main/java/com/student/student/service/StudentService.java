@@ -34,6 +34,10 @@ public class StudentService {
         return std;
     }
 
+    public Student updateStudent(Student s){
+        return repo.save(s);
+    }
+
 
     public String deleteByUSN(String usn){
         if(!repo.existsById(usn)){

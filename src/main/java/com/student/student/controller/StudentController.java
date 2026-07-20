@@ -33,6 +33,10 @@ public class StudentController {
     public Student getStudentByUSN(@PathVariable String usn){
         return service.getStudentByUSN(usn);
     }
+    @PutMapping("/student")
+    public Student updateStudent(@RequestBody Student s){
+        return service.updateStudent(s);
+    }
 
     @DeleteMapping("/student/{usn}")
     public String deleteByUSN(@PathVariable String usn){
