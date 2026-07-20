@@ -52,5 +52,9 @@ public class StudentService {
        return repo.count();
     }
 
+    public String deleteAll() {
+        repo.deleteAll();
+        return "All Records deleted";
+    }
 }
 

@@ -47,4 +47,9 @@ public class StudentController {
     public String deleteByUSN(@PathVariable String usn){
         return service.deleteByUSN(usn);
     }
+
+    @DeleteMapping("/deleteall")
+    public String deleteAll(){
+        return service.deleteAll();
+    }
 }
