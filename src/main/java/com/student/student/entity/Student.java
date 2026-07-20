@@ -9,16 +9,17 @@ public class Student {
     private String usn;
     private String name;
     private int age;
-    private String Address;
+    private String address;
 
-    public Student(String usn, String address, int age, String name) {
-        this.usn = usn;
-        Address = address;
-        this.age = age;
-        this.name = name;
+    public Student() {
+
     }
-    public Student(){
 
+    public Student(String usn, String name, int age, String address) {
+        this.usn = usn;
+        this.name = name;
+        this.age = age;
+        this.address = address;
     }
 
     public String getUsn() {
@@ -46,10 +47,10 @@ public class Student {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 }
