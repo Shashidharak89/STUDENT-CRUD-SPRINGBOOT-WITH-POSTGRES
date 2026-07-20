@@ -19,6 +19,11 @@ public class StudentController {
         return service.addStudent(s);
     }
 
+    @PostMapping("/student/multiple")
+    public List<Student> insertMultipleRecords(@RequestBody List<Student> list){
+        return service.insertMultipleRecords(list);
+    }
+
     @GetMapping("/student")
     public List<Student> getAll(){
         return service.getAllStudents();

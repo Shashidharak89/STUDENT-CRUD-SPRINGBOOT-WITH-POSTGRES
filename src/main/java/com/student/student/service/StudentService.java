@@ -18,6 +18,12 @@ public class StudentService {
         return repo.save(s);
     }
 
+
+    public List<Student> insertMultipleRecords(List<Student> list) {
+        return repo.saveAll(list);
+    }
+
+
     public List<Student> getAllStudents(){
         return repo.findAll();
     }
