@@ -23,6 +23,11 @@ public class StudentController {
     public List<Student> getAll(){
         return service.getAllStudents();
     }
+    
+    @GetMapping("/student/{usn}")
+    public Student getStudentByUSN(@PathVariable String usn){
+        return service.getStudentByUSN(usn);
+    }
 
     @DeleteMapping("/student/{usn}")
     public String deleteByUSN(@PathVariable String usn){

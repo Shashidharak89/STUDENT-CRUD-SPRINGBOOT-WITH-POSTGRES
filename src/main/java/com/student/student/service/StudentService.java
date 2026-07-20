@@ -22,6 +22,13 @@ public class StudentService {
         return repo.findAll();
     }
 
+
+    public Student getStudentByUSN(String usn){
+        Student std= repo.findById(usn).orElse(null);
+        return std;
+    }
+
+
     public String deleteByUSN(String usn){
         if(!repo.existsById(usn)){
             return "Record with USN:"+usn+" Not found";
@@ -30,5 +37,7 @@ public class StudentService {
         repo.delete(std);
         return "Deleted";
     }
+
+
 }
 
