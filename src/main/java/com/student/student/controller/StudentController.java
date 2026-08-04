@@ -14,6 +14,11 @@ public class StudentController {
         this.service = service;
     }
 
+    @GetMapping("/hello")
+    public String sayHello(){
+        return "Hello World";
+    }
+
     @PostMapping("/student")
     public Student insert(@RequestBody Student s){
         return service.addStudent(s);
